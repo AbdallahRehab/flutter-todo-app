@@ -95,11 +95,30 @@
 
 ### App in Action
 
-https://github.com/user-attachments/assets/demo.mov
+GitHub READMEs don't play `.mov` inline. Use the link below to view or download the demo, or convert to GIF for inline playback:
+
+**Download/View:** [assets/demo/demo.mov](assets/demo/demo.mov)
+
+Inline preview:
+
+![Demo](assets/demo/demo.gif)
+
+To generate a GIF locally on macOS:
+
+1. Ensure Homebrew is installed
+2. Run the conversion script:
+
+```
+tools/convert_demo_to_gif.sh
+```
+
+After generation, embed in README:
+
+```
+![Demo](assets/demo/demo.gif)
+```
 
 *Experience the smooth animations, intuitive gestures, and delightful interactions*
-
-**Alternative:** [Download Demo Video](assets/demo/demo.mov)
 
 </div>
 
