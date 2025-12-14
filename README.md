@@ -78,9 +78,10 @@
 
 ### Task Details & Filters
 
-| Task Details | Active Filter | Completed Tasks |Completed_filter Tasks |
-|:---:|:---:|:---:|
-| ![Detail](assets/screenshots/task_detail.png) | ![Active](assets/screenshots/active_filter.png) | ![Completed](assets/screenshots/completed.png) |![Completed_filter](assets/screenshots/completed_filter.png) |
+| Task Details | Active Filter | Completed Tasks | Completed Filter |
+|:---:|:---:|:---:|:---:|
+| ![Detail](assets/screenshots/task_detail.png) | ![Active](assets/screenshots/active_filter.png) | ![Completed](assets/screenshots/completed.png) | ![Completed Filter](assets/screenshots/completed_filter.png) |
+
 
 
 
@@ -94,9 +95,11 @@
 
 ### App in Action
 
-![Demo](assets/demo/demo.gif)
+https://github.com/user-attachments/assets/demo.mov
 
 *Experience the smooth animations, intuitive gestures, and delightful interactions*
+
+**Alternative:** [Download Demo Video](assets/demo/demo.mov)
 
 </div>
 
