@@ -15,9 +15,8 @@ Add the following screenshots to this directory:
 ### Feature Screenshots (Recommended)
 5. **active_filter.png** - Filtered view showing only active tasks
 6. **completed.png** - View of completed tasks with checkmarks
-7. **notification.png** - Screenshot of notification in action
-8. **dark_mode.png** - App in dark theme mode
-9. **empty_state.png** - Empty state with Lottie animation
+7. **completed_filter.png** - View of completed tasks with checkmarks
+
 
 ### Optional Screenshots
 10. **categories.png** - Different task categories

@@ -78,15 +78,11 @@
 
 ### Task Details & Filters
 
-| Task Details | Active Filter | Completed Tasks |
+| Task Details | Active Filter | Completed Tasks |Completed_filter Tasks |
 |:---:|:---:|:---:|
-| ![Detail](assets/screenshots/task_detail.png) | ![Active](assets/screenshots/active_filter.png) | ![Completed](assets/screenshots/completed.png) |
+| ![Detail](assets/screenshots/task_detail.png) | ![Active](assets/screenshots/active_filter.png) | ![Completed](assets/screenshots/completed.png) |![Completed_filter](assets/screenshots/completed_filter.png) |
 
-### Notifications & Themes
 
-| Notification | Dark Mode | Empty State |
-|:---:|:---:|:---:|
-| ![Notification](assets/screenshots/notification.png) | ![Dark](assets/screenshots/dark_mode.png) | ![Empty](assets/screenshots/empty_state.png) |
 
 </div>
 
