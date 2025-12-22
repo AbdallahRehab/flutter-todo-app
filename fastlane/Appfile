@@ -1,0 +1,5 @@
+# Fastlane Appfile (values can be overridden by ENV variables)
+app_identifier("com.example.riverpod-demo") # UPDATE to your iOS bundle identifier
+apple_id(ENV["APPLE_ID"])               # Your Apple ID email
+itc_team_id(ENV["APP_STORE_CONNECT_TEAM_ID"]) # App Store Connect Team ID
+team_id(ENV["APPLE_TEAM_ID"])                 # Developer Portal Team ID
