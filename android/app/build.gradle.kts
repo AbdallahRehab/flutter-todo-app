@@ -15,6 +15,19 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 }
 
+// Check if all required signing properties are present
+fun hasValidSigningConfig(): Boolean {
+    val storeFile = keystoreProperties.getProperty("storeFile")
+    val storePassword = keystoreProperties.getProperty("storePassword")
+    val keyAlias = keystoreProperties.getProperty("keyAlias")
+    val keyPassword = keystoreProperties.getProperty("keyPassword")
+    
+    return !storeFile.isNullOrEmpty() && 
+           !storePassword.isNullOrEmpty() && 
+           !keyAlias.isNullOrEmpty() && 
+           !keyPassword.isNullOrEmpty()
+}
+
 android {
     namespace = "com.example.riverpod_demo"
     compileSdk = flutter.compileSdkVersion
@@ -43,12 +56,10 @@ android {
     }
 
     signingConfigs {
-        create("release") {
-            if (keystoreProperties.isNotEmpty()) {
-                val storeFilePath = keystoreProperties.getProperty("storeFile")
-                if (storeFilePath != null) {
-                    storeFile = file(storeFilePath)
-                }
+        // Only create release signing config if all properties are valid
+        if (hasValidSigningConfig()) {
+            create("release") {
+                storeFile = file(keystoreProperties.getProperty("storeFile")!!)
                 storePassword = keystoreProperties.getProperty("storePassword")
                 keyAlias = keystoreProperties.getProperty("keyAlias")
                 keyPassword = keystoreProperties.getProperty("keyPassword")
@@ -58,10 +69,11 @@ android {
 
     buildTypes {
         release {
-            // Use release keystore if provided, otherwise fall back to debug for local runs.
-            signingConfig = try {
+            // Use release keystore if available, otherwise use debug signing
+            signingConfig = if (hasValidSigningConfig()) {
                 signingConfigs.getByName("release")
-            } catch (e: Exception) {
+            } else {
+                println("WARNING: Release signing not configured. Using debug keystore.")
                 signingConfigs.getByName("debug")
             }
         }
